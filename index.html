@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Inscrição</title>
+</head>
+<body>
+    <div class="content">
+        <h1> Cadastramento </h1>
+        <form action="processar-dados.php" method="post" id="form">
+            <div>
+                <input type="text" name="nome" placeholder="Nome" class="inputs required" oninput="nameValidate()"> 
+                <span class="span-required">Nome precisa ter no mínimo 4 caracteres</span>
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="E-mail" class="inputs required" oninput="emailValidate()"> 
+                <span class="span-required">Digite um E-mail válido</span>
+            </div>
+            <div>
+                <input type="password" name="senha" placeholder="Senha" class="inputs required" oninput="mainPasswordValidate()"> 
+                <span class="span-required">Senha precisa ter no mínimo 8 caracteres</span>
+            </div>
+            <div>
+                <input type="password" placeholder="Repita sua senha" class="inputs required" oninput="mainPasswordValidate()"> 
+                <span class="span-required">Senhas não coincidem</span>
+            </div>
+            <p>Sexo:</p>
+            <div class="box-select">
+                <div>
+                    <input type="radio" id="m" value="m" name="sexo">
+                    <label for="m">Masculino</label>
+                </div>
+                <div>
+                    <input type="radio" id="f" value="f" name="sexo">
+                    <label for="f">Feminino</label>
+                </div>
+                <div>
+                    <input type="radio" id="o" value="o" name="sexo">
+                    <label for="o">Outro</label>
+                </div>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
